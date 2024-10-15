@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15%;
+    object-fit: cover;
+    border: 5px solid #9969b4;
+}
+
+.profile h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    color:  #9969b4 ;
+}
+
+.profile h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+/* bloques acerca de mi  */
+
+.services {
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+}
+
+.service-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.service-item h3 {
+    font-size: 1.25rem;
+    color:  #611ead;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color:  #5e0d8d;
+}
+
+@media (max-width: 768px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    background-color: #eaddf1;
+}
+
+/* Formulario de Contacto */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+form input, form textarea {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: 2px solid #cdc5ff;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #cdc5ff;
+}
+.logo-xs{
+    width: 35px;
+    margin: 10px;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button {
+    background-color: #cb7ce4;
+    color: #ffffff;
+    padding: 0.5rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.10s ease;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: #7a348f;
+}
+
+/* Efecto interactivo */
+@keyframes glow {
+    0% { box-shadow: 0 0 20px #000000; }
+    50% { box-shadow: 0 0 30px #ffffff; }
+    100% { box-shadow: 0 0 40px #8200aa; }
+}
+
+button:hover {
+    animation: glow 1s infinite alternate;
+}
+
+.service-item:hover{
+    box-shadow: 3px 3px 3px rgb(108, 71, 136);
+}
